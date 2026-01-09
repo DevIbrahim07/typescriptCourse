@@ -1,9 +1,13 @@
-// interface mean signature . mean more types ho skti hai. like same types repeat ho rahi hai to we can use interface
-type chaiOrder = {
+// interface mean signature . mean more types ho skti hai.
+// like same types repeat ho rahi hai to we can use interface
+// interfaces are used to define the structure of an object
+// interfaces can be extended and implemented
+// interfaces support declaration merging
+interface chaiOrder {
   type: string;
   sugar: number;
   amount: boolean;
-};
+}
 function makeChai(order: chaiOrder) {
   console.log("order has been made", order);
 }
@@ -13,7 +17,7 @@ function serveChai(order: chaiOrder) {
 }
 
 // type response = { ok: true } | { ok: false };
-// always use interface over type when we are using classes
+// always use interface over type when we are using classes bcz classes can implement interfaces
 interface response {
   ok: true | false;
 }
@@ -28,7 +32,8 @@ function orderTea(t: teaType) {
   console.log("tea ordered of type ", t);
 }
 
-// using intersection types & dono types ani chahiye  mean teaLeaves and teaLeaves dono use krni pre gi wrna error ayega
+// using intersection types & dono types ani chahiye  mean teaLeaves
+// and teaLeaves dono use krni pre gi wrna error ayega
 type baseChai = { teaLeaves: number };
 type extraChai = { extraSpices: boolean };
 
@@ -39,7 +44,7 @@ const cup: fullChai = {
   extraSpices: true,
 };
 
-// new examples here bio is optional
+// new examples here bio is optional property
 
 type user = {
   name: string;

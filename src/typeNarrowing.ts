@@ -63,7 +63,7 @@ function serveOrder(item: chaiType | string) {
   }
 }
 
-// example
+// example of discriminated union
 type gingerChai = {
   type: "masala";
   sugarLevel: number;

@@ -3,7 +3,8 @@ let subs: string | number = "1Million";
 let users: number | boolean = 12500;
 let apiRequestStatus: "pending" | "success" | "end" = "success";
 apiRequestStatus = "end";
-//  apiRequestStatus = "started"  Error: Type '"started"' is not assignable to type '"pending" | "success" | "end"'.
+//  apiRequestStatus = "started"  Error: Type '"started"' is not assignable to type
+// '"pending" | "success" | "end"'.
 
 // any type can hold any type of value
 let orders = ["1", "2", "3"];

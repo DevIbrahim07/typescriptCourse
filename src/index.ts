@@ -1,3 +1,4 @@
+// example of type annotations in function
 function greet(name: string): string {
   return `hello {name}`;
 }

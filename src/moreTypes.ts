@@ -25,6 +25,7 @@ newValue = "hello world";
 newValue = [2, 2, 3, 2];
 // newValue.toUpperCase() // ye error dega kyuki unknown me hum directly kuch ni kr skte
 // hume pehle type check krna prta he
+// so we use guards
 if (typeof newValue === "string") {
   newValue.toUpperCase();
 }
@@ -45,10 +46,13 @@ try {
 // also
 
 let data: unknown = "hello world";
-// const datahe:string = data // ye error dega
+//const datahe:string = data // ye error dega kyuki data ka type unknown he
 const datahe: string = data as string; // ye sahi he
 
-// lets discuss nevertype
+// lets discuss nevertype ye kab use hota he
+
+// nevertype use hota he jab hum chahte he ki koi variable kabhi bhi koi value na le
+// jaise ki function jo kuch return na kare
 
 type Role = "admin" | "user" | "superadmin";
 
@@ -61,6 +65,8 @@ function redirectionOnRoleBase(role: Role): void {
     console.log("redirect to user dashboard");
     return;
   }
-  // role > jo ye role define kra ha yaha pr is ki datatype never  ya superamin bn chuki he hover on it and check krlo
+  // role > jo ye role define kra ha yaha pr is ki datatype never  ya superamin
+  //  bn chuki he hover on it and check krlo
   role;
 }
+//void ka mtlb he ki function kuch return ni karega

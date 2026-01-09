@@ -1,4 +1,6 @@
-// working with arrays
+// working with arrays in typescript
+/////////////////////////ARRAYS/////////////////////ARRAYS/////////////////////ARRAYS///////////////
+// old way to declear array types
 const chaiFlavours: string[] = ["masala", "adrak"];
 // const chaiFlavours :string[] = ["masala","adrak",3] got error bcz it is specific to just strings
 const pricing: number[] = [22, 35, 500];
@@ -30,8 +32,9 @@ const table: number[][] = [
 ];
 
 //////////////////////////TUPLES////////TUPLES///////////////TUPLES//////////////////////////
-// tuple mai multiple datatype values ho skti hai . order matters a lot in tuple .if we define first string then
-// number . so valuse should be written like first of all with string then numbers
+// tuple mai multiple datatype values ho skti hai . order matters a lot in tuple .
+// if we define first string then number . so valuse should be written like first of all
+//  with string then numbers
 
 let chaiTuple: [string, number] = ["masala", 45];
 // chaiTuple = [ 30,"adrak"] got error bcz of order matters in tuple;

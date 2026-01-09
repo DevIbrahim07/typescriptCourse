@@ -1,4 +1,6 @@
 // working with functions in typescript
+// type annotations in function parameters and return types
+
 function makeChai(type: string, cups: number) {
   console.log(`making ${cups} cups of ${type} chai`);
 }

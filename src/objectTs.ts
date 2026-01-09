@@ -1,4 +1,7 @@
 // now work with object types in ts
+//  ts main object types ko handle kr sakta hai through different tariqe se
+
+// direct object declaration
 
 const chai = {
   name: "Masala Chai",
@@ -25,7 +28,7 @@ tea = {
   isHot: true,
 };
 
-// through alias
+// through alias type
 
 type newTea = {
   name: string;
@@ -52,7 +55,8 @@ let largeCup = {
 smallCup = largeCup;
 
 // another
-// brew wali example mai bhi errror nai aye ga kyuki coffee object me jo extra property hai wo ignore kr di jay gi
+// brew wali example mai bhi errror nai aye ga kyuki coffee object me jo extra property hai
+// wo ignore kr di jay gi
 type Brew = { brewTime: number };
 const coffee = { brewTime: 5, beans: "Arabic" };
 const newBrew: Brew = coffee;
@@ -67,8 +71,10 @@ type order = {
   address: address;
 };
 
-// another exmaple with partial type like data type kisi trha define krna but un ko different tariqa se use krna
-// even yaha pr bhi error nai de raha updateChai({});with empty object. hm partialy hi update kr rhy hain
+// another exmaple with partial type like data type kisi trha define krna but un
+// ko different tariqa se use krna
+// even yaha pr bhi error nai de raha updateChai({});with empty object. hm partialy hi
+//  update kr rhy hain
 type Chai = {
   name: string;
   price: number;
