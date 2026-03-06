@@ -10,6 +10,14 @@ function chai(kind: string | number) {
   return `chai oder ${kind}`;
 }
 
+function serveChai(chai: string | number) {
+  if (typeof chai === "number") {
+    return `Serving ${chai} cups of chai`;
+  } else {
+    return `Serving ${chai} chai`;
+  }
+}
+
 // exhaustive checking kr rahe hai
 function oderChai(order: "small" | "medium" | "large") {
   if (order === "small") {
@@ -44,6 +52,10 @@ function prepareChai(chai: masalaChai | adrakChai) {
 // apne khud k types create krne ka tariqa
 
 type chaiType = {
+  type: string;
+  sugar: number;
+};
+type chaiTypeNew = {
   type: string;
   sugar: number;
 };
@@ -92,3 +104,25 @@ function makeChai(order: chai) {
       break;
   }
 }
+
+type adrakChaiType = {
+  type: "adrak";
+  sugarLevel: number;
+};
+
+type elaichiChaiType = {
+  type: "elaichi";
+  sugarLevel: number;
+};
+
+type chaiTypeUnion = adrakChaiType | elaichiChaiType;
+
+function makeNewChai(order: chaiTypeUnion) {
+  if (order.type === "adrak") {
+    return " you ordered adrak chai";
+  }
+  if (order.type === "elaichi") {
+    return " you ordered elaichi wali chai";
+  }
+}
+const makedChai = console.log(makeNewChai({ type: "elaichi", sugarLevel: 2 }));

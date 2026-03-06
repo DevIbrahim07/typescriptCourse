@@ -10,6 +10,7 @@ makeChai("masala", 3);
 function getChaiPrice(): number {
   return 3;
 }
+
 // this gets error
 // function order(order: string): string {
 //   if (!order) return null;
@@ -39,3 +40,17 @@ function createNewChai(order: {
   // console.log("chai created");
   return 5;
 }
+
+// functions that return promises
+
+const promiseFunction = async (age: number): Promise<number> => {
+  return age;
+};
+
+console.log(promiseFunction(33));
+
+const run = async () => {
+  const result = await promiseFunction(23);
+  console.log(result);
+};
+run();
