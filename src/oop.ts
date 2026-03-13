@@ -1,5 +1,16 @@
 // working with oop concepts
 // classes
+
+class ChaiClass {
+  flavour: string;
+  price: number;
+
+  constructor(flavour: string, price: number) {
+    this.flavour = flavour;
+    this.price = price;
+  }
+}
+
 class Chai {
   flavour: string;
   price: number;
